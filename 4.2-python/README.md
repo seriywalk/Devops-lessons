@@ -111,5 +111,6 @@ _если IP для "drive.google.com" изменилось._
 ![](images/task4_err.jpg)
 
 _оповещатель если проверка провалена 
+
 ![](images/task4_err_mes.jpg)
 
