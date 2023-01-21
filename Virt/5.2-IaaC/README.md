@@ -23,6 +23,19 @@ Vagrant
 Ansible
 Приложить вывод команд установленных версий каждой из программ, оформленный в markdown.
 
+`root@shangi-Modern-15-B11M:~# vboxmanage --version
+6.1.38_Ubuntur153438
+root@shangi-Modern-15-B11M:~# vagrant --version
+Vagrant 2.2.19
+root@shangi-Modern-15-B11M:~# ansible --version
+ansible 2.10.8
+  config file = None
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 3.10.6 (main, Nov 14 2022, 16:10:14) [GCC 11.3.0]
+`
+
 ## Задача 4 (*)
 
 Воспроизвести практическую часть лекции самостоятельно.
