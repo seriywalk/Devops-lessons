@@ -20,25 +20,34 @@ Hey, Netology
 
 **Решение**
 1. Создал учетную запись на hub.docker.com. 
-2. Создал каталог для работы Docker. В нем создал файл index.html с HTML-кодом по заданию. Создар файл Dockerfile c инструкциями
-cat Dockerfile 
-FROM nginx
-COPY index.html /usr/share/nginx/html/index.html
-3. Скачал образ nginx 
-docker pull nginx
-4. создал форк образа nginx.
-`docker build .` точка в конце показывает, что докер будер использовать текущий каталог и стандартный файл Dockerfile. Образ создается без имени, только с image-id.
+На компьютере нужно войти в свою учетку используя команду `docker login`
 
-`docker images
+2. Создал каталог для работы _Docker_. В нем создал файл _index.html_ с HTML-кодом по заданию. Создал файл _Dockerfile_ c инструкциями
+
+`$cat Dockerfile 
+FROM nginx
+COPY index.html /usr/share/nginx/html/index.html`
+
+3. Скачал образ nginx 
+
+`$docker pull nginx`
+
+4. Создал форк образа nginx.
+`$docker build .` Точка в конце показывает, что докер будет использовать текущий каталог и стандартный файл _Dockerfile_. Образ создается без имени, только с image-id.
+
+`$docker images
 REPOSITORY   TAG       IMAGE ID       CREATED              SIZE
 <none>       <none>    9bd81f8b7b15   About a minute ago   142MB
 nginx        latest    a99a39d070bf   2 weeks ago          142MB`
  
 Прилепить ему имя можно командой `docker tag 9bd81f8b7b15 sirwalknet/mynginx:v2`. Тэг v2 из-за того, что апостроф в файле index.html читается с ошибкой, заменил его коснтрукцией `I am`
+
 5. Проверить работу контейнера можно командой `docker run -p 80:80 sirwalknet/mynginx:v2`
+
 6. Теперь форк можно отправить в [мой репозиторий](https://hub.docker.com/layers/sirwalknet/mynginx/v2/images/sha256-8e13886fc22e812bf530f7d5109f5a5aca509a8a28ec3fc2f9f4c248faec53cd?context=repo)
 
 `docker push sirwalknet/mynginx:v2`
+
 ## Задача 2
 
 Посмотрите на сценарий ниже и ответьте на вопрос: "Подходит ли в этом сценарии использование Docker контейнеров или лучше подойдет виртуальная машина, физическая машина? Может быть возможны разные варианты?"
