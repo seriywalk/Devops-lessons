@@ -24,9 +24,9 @@ Hey, Netology
 
 2. Создал каталог для работы _Docker_. В нем создал файл _index.html_ с HTML-кодом по заданию. Создал файл _Dockerfile_ c инструкциями
 
-`$cat Dockerfile 
-FROM nginx
-COPY index.html /usr/share/nginx/html/index.html`
+`FROM nginx`
+
+`COPY index.html /usr/share/nginx/html/index.html`
 
 3. Скачал образ nginx 
 
@@ -36,9 +36,11 @@ COPY index.html /usr/share/nginx/html/index.html`
 `$docker build .` Точка в конце показывает, что докер будет использовать текущий каталог и стандартный файл _Dockerfile_. Образ создается без имени, только с image-id.
 
 `$docker images
-REPOSITORY   TAG       IMAGE ID       CREATED              SIZE
-<none>       <none>    9bd81f8b7b15   About a minute ago   142MB
-nginx        latest    a99a39d070bf   2 weeks ago          142MB`
+REPOSITORY   TAG       IMAGE ID       CREATED              SIZE`
+
+`<none>       <none>    9bd81f8b7b15   About a minute ago   142MB`
+
+`nginx        latest    a99a39d070bf   2 weeks ago          142MB`
  
 Прилепить ему имя можно командой `docker tag 9bd81f8b7b15 sirwalknet/mynginx:v2`. Тэг v2 из-за того, что апостроф в файле index.html читается с ошибкой, заменил его коснтрукцией `I am`
 
