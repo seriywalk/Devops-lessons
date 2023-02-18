@@ -35,4 +35,6 @@
 Изучите доступный интерфейс, найдите в интерфейсе автоматически созданные docker-compose панели с графиками(dashboards).
 Подождите 5-10 минут, чтобы система мониторинга успела накопить данные.
 
-![task4.png](images%2Ftask4.png)
+![task4_MS.png](images%2Ftask4_MS.png)
+
+![task4_DH.png](images%2Ftask4_DH.png)
