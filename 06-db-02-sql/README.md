@@ -11,7 +11,8 @@
 
 Используя docker поднимите инстанс PostgreSQL (версию 12) c 2 volume, 
 в который будут складываться данные БД и бэкапы.
-Приведите получившуюся команду или docker-compose [манифест]([docker-compose.yaml](docker-compose.yaml)).
+Приведите получившуюся команду или docker-compose [манифест](https://github.com/seriywalk/Devops-lessons/blob/master/06-db-02-sql/docker-compose.yaml).
+
 ![task1.png](images%2Ftask1.png)
 
 ## Задача 2
