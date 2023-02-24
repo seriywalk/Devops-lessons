@@ -1,0 +1,26 @@
+version: '2.1'
+
+networks:
+  db_net:
+    driver: bridge
+
+volumes:
+    vol4db: {}
+    vol4backup: {}
+
+services:
+
+  postgres:
+    image: postgres:12
+    container_name: postgres
+    volumes:
+      - vol4db:/var/lib/postgresql/data
+      - vol4backup:/var/lib/postgresql/backup
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    networks:
+      - db_net
+    ports:
+      - 5432:5432
+
