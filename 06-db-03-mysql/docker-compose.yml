@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+ db:
+   image: mysql:8
+   restart: always
+   environment:
+     MYSQL_DATABASE: 'mysql_db'
+     MYSQL_USER: 'net'
+     MYSQL_PASSWORD: 'netology'
+     MYSQL_ROOT_PASSWORD: 'netology'
+   volumes:
+     - my-db:/var/lib/mysql
+volumes:
+   my-db:
