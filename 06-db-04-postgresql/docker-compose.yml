@@ -1,0 +1,33 @@
+version: '2.1'
+
+networks:
+  db_net:
+    driver: bridge
+
+volumes:
+    v_psql13: {}
+
+services:
+
+  postgres:
+    image: postgres:13
+    container_name: psql13
+    volumes:
+      - v_psql13:/var/lib/postgresql/data
+      - ./test_data :/var/lib/postgresql/backup
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    networks:
+      - db_net
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    networks:
+      - db_net
+    ports:
+      - 8080:8080
