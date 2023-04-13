@@ -4,8 +4,8 @@ networks:
   db_net:
     driver: bridge
 
-volumes:
-    v_psql13: {}
+#volumes:
+#    v_psql13: {}
 
 services:
 
@@ -13,8 +13,8 @@ services:
     image: postgres:13
     container_name: psql13
     volumes:
-      - v_psql13:/var/lib/postgresql/data
-      - ./test_data :/var/lib/postgresql/backup
+#      - v_psql13:/var/lib/postgresql/data
+      - ./test_data:/var/lib/postgresql/backup
     restart: always
     environment:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
